@@ -11,6 +11,15 @@
       font-family: Arial, sans-serif;
     }
 
+    /* 设置右上角的logo */
+    .logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 50px;  /* 设置logo的宽度 */
+      height: auto;  /* 保持图片的纵横比 */
+    }
+    
     /* 设置上半部的深蓝色宽条 */
     .blue-bar {
       background-color: #003366;  /* 深蓝色 */
@@ -78,6 +87,9 @@
   <div class="blue-bar">
     UMSSS: A Dataset for Visual Scene Semantic Segmentation in Underground Mines
   </div>
+
+  <!-- 右上角logo -->
+  <img src="logo.png" alt="Logo" class="logo">
 
   <!-- 页面主体内容 -->
   <div class="content">
