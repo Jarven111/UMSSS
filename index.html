@@ -64,6 +64,31 @@
       text-decoration: none;
     }
 
+   /* 贡献人员部分样式 */
+    .contributors {
+      display: flex;
+      flex-wrap: wrap; /* 允许换行 */
+      gap: 20px;
+    }
+
+    .contributor {
+      display: flex;
+      align-items: center;
+      width: 45%;  /* 每个贡献者占据父容器的45%，保持两列 */
+      margin-bottom: 20px;
+    }
+
+    .contributor img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%; /* 圆形头像 */
+      margin-right: 20px;
+    }
+
+    .contributor-info {
+      flex: 1;
+    }
+
     .contributors ul {
       list-style-type: none;
       padding-left: 0;
@@ -82,6 +107,14 @@
     .organizations li {
       margin: 5px 0;
     }
+
+    /* 图片样式 */
+    img {
+      margin-top: 20px;
+      max-width: 100%;
+      height: auto;
+    }
+    
 
   </style>
 </head>
@@ -118,11 +151,34 @@
     <div class="section contributors">
       <h2>Contributors</h2>
       <p>The following individuals contributed to the development and release of the UMSSS dataset:</p>
-      <ul>
-        <li>John Doe - Lead Researcher</li>
-        <li>Jane Smith - Data Collection and Annotation</li>
-        <li>Tom Brown - Dataset Management</li>
-      </ul>
+
+      <!-- 贡献者1 -->
+      <div class="contributor">
+        <img src="john_doe.jpg" alt="John Doe">
+        <div class="contributor-info">
+          <h3>John Doe</h3>
+          <p>Lead Researcher, specializing in underground mining and computer vision applications.</p>
+        </div>
+      </div>
+
+      <!-- 贡献者2 -->
+      <div class="contributor">
+        <img src="jane_smith.jpg" alt="Jane Smith">
+        <div class="contributor-info">
+          <h3>Jane Smith</h3>
+          <p>Data Collection and Annotation, with expertise in remote sensing and image processing.</p>
+        </div>
+      </div>
+
+      <!-- 贡献者3 -->
+      <div class="contributor">
+        <img src="tom_brown.jpg" alt="Tom Brown">
+        <div class="contributor-info">
+          <h3>Tom Brown</h3>
+          <p>Dataset Management, ensuring high-quality and well-organized data for research purposes.</p>
+        </div>
+      </div>
+
     </div>
 
     <!-- 贡献单位部分 -->
