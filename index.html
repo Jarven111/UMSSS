@@ -64,16 +64,17 @@
       text-decoration: none;
     }
 
-    /* 数据集介绍部分，右侧加图片 */
+    /* 数据集介绍部分，标题在上，正文和图片在一行 */
     .dataset-introduction {
       display: flex;
-      flex-wrap: wrap;   /* 允许换行 */
-      align-items: flex-start; /* 确保标题在上方 */
-      justify-content: space-between; /* 使文本和图片分别居两侧 */
+      flex-direction: row;  /* 水平排列 */
+      justify-content: flex-start;
+      align-items: flex-start; /* 确保标题和正文顶部对齐 */
     }
 
-    .dataset-introduction p {
-      flex: 1; /* 文本部分占据剩余空间 */
+    .dataset-introduction-text {
+      flex: 1;  /* 文本占据剩余空间 */
+      margin-right: 20px; /* 添加右边距，避免文本与图片重叠 */
       font-size: 18px;
       line-height: 1.6;
     }
@@ -81,7 +82,6 @@
     .dataset-introduction img {
       width: 40%; /* 图片宽度 */
       height: auto;
-      margin-left: 20px;
       border-radius: 8px; /* 可选的圆角效果 */
       max-width: 100%; /* 确保图片不会超出容器 */
     }
@@ -167,10 +167,12 @@
 
     <!-- 数据集介绍部分 -->
     <div class="section dataset-introduction">
-      <h2>Dataset Introduction</h2>
-      <p>
-        The UMSSS (Underground Mine Scene Semantic Segmentation) dataset is designed to assist research in the semantic segmentation of underground mine environments. This dataset contains a variety of labeled images representing different underground mine scenarios, with detailed annotations for various objects and structures commonly found in mines.
-      </p>
+      <div class="dataset-introduction-text">
+        <h2>Dataset Introduction</h2>
+        <p>
+          The UMSSS (Underground Mine Scene Semantic Segmentation) dataset is designed to assist research in the semantic segmentation of underground mine environments. This dataset contains a variety of labeled images representing different underground mine scenarios, with detailed annotations for various objects and structures commonly found in mines.
+        </p>
+      </div>
       <img src="images/dataset_example.jpg" alt="Dataset Example">
     </div>
 
