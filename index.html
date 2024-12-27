@@ -87,10 +87,10 @@
       max-width: 100%; /* 确保图片不会超出容器 */
     }
 
-    /* 贡献人员部分，分成两列 */
+    /* 贡献人员部分，单栏标题和正文，双栏人员介绍 */
     .contributors {
       display: flex;
-      flex-direction: column; /* 改为垂直排列 */
+      flex-direction: column; /* 标题和正文垂直排列 */
       align-items: flex-start; /* 保证标题和正文左对齐 */
     }
 
@@ -100,10 +100,18 @@
       margin-bottom: 10px; /* 添加一些间距 */
     }
 
+    /* 贡献人员的展示，双列布局 */
+    .contributors-list {
+      display: flex;
+      flex-wrap: wrap; /* 自动换行，使得在空间充足时显示为两列 */
+    }
+
     .contributor {
       display: flex;
       align-items: center;
-      margin-bottom: 20px; /* 每个贡献者之间添加间距 */
+      margin-bottom: 20px;
+      width: 48%; /* 每列占据 48% 的宽度，剩余空间用于间距 */
+      margin-right: 4%; /* 每列之间的间距 */
     }
 
     .contributor img {
@@ -207,42 +215,44 @@
       <h2>Contributors</h2>
       <p>The following individuals contributed to the development and release of the UMSSS dataset:</p>
 
-      <!-- 贡献者1 -->
-      <div class="contributor">
-        <img src="john_doe.jpg" alt="John Doe">
-        <div class="contributor-info">
-          <h3>John Doe</h3>
-          <p>Lead Researcher, specializing in underground mining and computer vision applications.</p>
+      <!-- 贡献人员列表 -->
+      <div class="contributors-list">
+        <!-- 贡献者1 -->
+        <div class="contributor">
+          <img src="john_doe.jpg" alt="John Doe">
+          <div class="contributor-info">
+            <h3>John Doe</h3>
+            <p>Lead Researcher, specializing in underground mining and computer vision applications.</p>
+          </div>
+        </div>
+
+        <!-- 贡献者2 -->
+        <div class="contributor">
+          <img src="jane_smith.jpg" alt="Jane Smith">
+          <div class="contributor-info">
+            <h3>Jane Smith</h3>
+            <p>Data Collection and Annotation, with expertise in remote sensing and image processing.</p>
+          </div>
+        </div>
+
+        <!-- 贡献者3 -->
+        <div class="contributor">
+          <img src="tom_brown.jpg" alt="Tom Brown">
+          <div class="contributor-info">
+            <h3>Tom Brown</h3>
+            <p>Dataset Management, ensuring high-quality and well-organized data for research purposes.</p>
+          </div>
+        </div>
+
+        <!-- 贡献者4 -->
+        <div class="contributor">
+          <img src="alice_white.jpg" alt="Alice White">
+          <div class="contributor-info">
+            <h3>Alice White</h3>
+            <p>Project Coordinator, overseeing the overall project and ensuring timely delivery of datasets.</p>
+          </div>
         </div>
       </div>
-
-      <!-- 贡献者2 -->
-      <div class="contributor">
-        <img src="jane_smith.jpg" alt="Jane Smith">
-        <div class="contributor-info">
-          <h3>Jane Smith</h3>
-          <p>Data Collection and Annotation, with expertise in remote sensing and image processing.</p>
-        </div>
-      </div>
-
-      <!-- 贡献者3 -->
-      <div class="contributor">
-        <img src="tom_brown.jpg" alt="Tom Brown">
-        <div class="contributor-info">
-          <h3>Tom Brown</h3>
-          <p>Dataset Management, ensuring high-quality and well-organized data for research purposes.</p>
-        </div>
-      </div>
-
-      <!-- 贡献者4 -->
-      <div class="contributor">
-        <img src="alice_white.jpg" alt="Alice White">
-        <div class="contributor-info">
-          <h3>Alice White</h3>
-          <p>Project Coordinator, overseeing the overall project and ensuring timely delivery of datasets.</p>
-        </div>
-      </div>
-
     </div>
 
     <!-- 贡献单位部分 -->
