@@ -89,9 +89,15 @@
 
     /* 贡献人员部分，分成两列 */
     .contributors {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 分为两列 */
-      gap: 30px; /* 列之间的间距 */
+      display: flex;
+      flex-direction: column; /* 改为垂直排列 */
+      align-items: flex-start; /* 保证标题和正文左对齐 */
+    }
+
+    .contributors p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 10px; /* 添加一些间距 */
     }
 
     .contributor {
