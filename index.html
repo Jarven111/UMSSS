@@ -87,40 +87,39 @@
       max-width: 100%; /* 确保图片不会超出容器 */
     }
 
-    /* 贡献人员部分样式 */
+     /* 贡献人员部分 */
     .contributors {
-      display: flex;
-      flex-wrap: wrap; /* 允许换行 */
-      gap: 20px;
+      display: block; /* 确保标题和正文分别占据各自的行 */
     }
 
     .contributor {
       display: flex;
       align-items: center;
-      width: 45%;  /* 每个贡献者占据父容器的45%，保持两列 */
-      margin-bottom: 20px;
+      margin-bottom: 20px; /* 每个贡献者之间添加间距 */
     }
 
     .contributor img {
-      width: 60px;
-      height: 80px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%; /* 圆形头像 */
-      margin-right: 20px;
+      margin-right: 20px; /* 头像与介绍文字之间的间距 */
     }
 
     .contributor-info {
-      flex: 1;
+      max-width: 80%;
     }
 
-    .contributors ul {
-      list-style-type: none;
-      padding-left: 0;
+    .contributor-info h3 {
+      margin: 0;
+      font-size: 20px;
     }
 
-    .contributors li {
+    .contributor-info p {
       margin: 5px 0;
+      font-size: 16px;
+      color: #555;
     }
-
+    
     /* 贡献单位部分样式 */
     .organizations ul {
       list-style-type: none;
