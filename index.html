@@ -20,16 +20,18 @@
       height: auto;  /* 保持图片的纵横比 */
     }
     
-    /* 设置上半部的深蓝色宽条 */
+    /* 设置上半部分背景图片 */
     .blue-bar {
-      background-color: #003366;  /* 深蓝色 */
-      color: white;               /* 白色文字 */
-      text-align: center;         /* 居中对齐 */
-      padding: 200px 0;            /* 上下内边距 */
-      font-size: 40px;            /* 文字大小 */
-      word-wrap: break-word;      /* 自动换行 */
-      max-width: 100%;            /* 最大宽度 100% */
-      overflow-wrap: break-word;  /* 防止文字溢出 */
+      background-image: url('img/back.png');  /* 替换成你的背景图片路径 */
+      background-size: cover;  /* 让背景图片覆盖整个区域 */
+      background-position: center;  /* 背景图片居中显示 */
+      color: white;              /* 文字颜色 */
+      text-align: center;        /* 居中对齐 */
+      padding: 240px 0;          /* 上下内边距 */
+      font-size: 40px;           /* 文字大小 */
+      word-wrap: break-word;     /* 自动换行 */
+      max-width: 100%;           /* 最大宽度 100% */
+      overflow-wrap: break-word; /* 防止文字溢出 */
     }
 
     /* 设置页面主体内容 */
