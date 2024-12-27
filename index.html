@@ -40,6 +40,7 @@
       margin: 0 auto;  /* 页面居中 */
     }
 
+    
     /* 每个部分的样式 */
     .section {
       margin-bottom: 40px;
@@ -64,6 +65,7 @@
       text-decoration: none;
     }
 
+    
     /* 数据集介绍部分，标题在上，正文和图片在一行 */
     .dataset-introduction {
       display: flex;
@@ -87,6 +89,7 @@
       max-width: 100%; /* 确保图片不会超出容器 */
     }
 
+    
     /* 贡献人员部分，单栏标题和正文，双栏人员介绍 */
     .contributors {
       display: flex;
@@ -100,18 +103,17 @@
       margin-bottom: 10px; /* 添加一些间距 */
     }
 
-    /* 贡献人员的展示，双列布局 */
+    /* 贡献人员列表的双栏布局 */
     .contributors-list {
-      display: flex;
-      flex-wrap: wrap; /* 自动换行，使得在空间充足时显示为两列 */
+      display: grid; /* 使用grid布局 */
+      grid-template-columns: repeat(2, 1fr); /* 分为两列 */
+      gap: 20px; /* 每列之间的间距 */
     }
 
     .contributor {
       display: flex;
       align-items: center;
       margin-bottom: 20px;
-      width: 48%; /* 每列占据 48% 的宽度，剩余空间用于间距 */
-      margin-right: 4%; /* 每列之间的间距 */
     }
 
     .contributor img {
@@ -135,6 +137,7 @@
       font-size: 16px;
       color: #555;
     }
+
     
     /* 贡献单位部分样式 */
     .organizations ul {
@@ -210,6 +213,7 @@
       </p>
     </div>
 
+    
     <!-- 贡献人员部分 -->
     <div class="section contributors">
       <h2>Contributors</h2>
@@ -254,6 +258,7 @@
         </div>
       </div>
     </div>
+    
 
     <!-- 贡献单位部分 -->
     <div class="section organizations">
