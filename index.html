@@ -64,7 +64,27 @@
       text-decoration: none;
     }
 
-   /* 贡献人员部分样式 */
+    /* 数据集介绍部分，右侧加图片 */
+    .dataset-introduction {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* 使文本和图片分别居两侧 */
+    }
+
+    .dataset-introduction p {
+      flex: 1; /* 文本部分占据剩余空间 */
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .dataset-introduction img {
+      width: 40%; /* 图片宽度 */
+      height: auto;
+      margin-left: 20px;
+      border-radius: 8px; /* 可选的圆角效果 */
+    }
+
+    /* 贡献人员部分样式 */
     .contributors {
       display: flex;
       flex-wrap: wrap; /* 允许换行 */
@@ -142,11 +162,22 @@
 
   <!-- 页面主体内容 -->
   <div class="content">
+
     <!-- 数据集介绍部分 -->
-    <div class="section">
+    <div class="section dataset-introduction">
       <h2>Dataset Introduction</h2>
       <p>
         The UMSSS (Underground Mine Scene Semantic Segmentation) dataset is designed to assist research in the semantic segmentation of underground mine environments. This dataset contains a variety of labeled images representing different underground mine scenarios, with detailed annotations for various objects and structures commonly found in mines.
+      </p>
+      <img src="img/20241227094726.png" alt="Dataset Example">
+    </div>
+
+    <!-- 数据集下载部分 -->
+    <div class="section">
+      <h2>Dataset Download</h2>
+      <p>
+        You can download the UMSSS dataset from the following link:
+        <a href="https://example.com/dataset" class="download-link" target="_blank">Download UMSSS Dataset</a>
       </p>
     </div>
 
